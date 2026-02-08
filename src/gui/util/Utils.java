@@ -27,7 +27,6 @@ public class Utils {
 		} catch (NumberFormatException e) {
 			return null;
 		}
-
 	}
 
 	public static <T> void formatTableColumnDate(TableColumn<T, Date> tableColumn, String format) {
@@ -74,7 +73,6 @@ public class Utils {
 			return cell;
 
 		});
-
 	}
 
 	public static void formatDatePicker(DatePicker datePicker, String format) {
@@ -107,7 +105,15 @@ public class Utils {
 			}
 
 		});
+	}
+	
+	public static Double tryParseToDouble(String str) {
 
+		try {
+			return Double.parseDouble(str);
+		} catch (NumberFormatException e) {
+			return null;
+		}
 	}
 
 }
